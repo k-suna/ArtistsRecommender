@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Artist Recommender</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Artist Recommender</h1>
+
+        <form action="/" method="POST">
+            <label for="artist_name">
+                あなたの好きなアーティストと関連度の高いアーティストを10人推薦します。<br>
+                好きなアーティスト名を入力してください。<br><br>
+                <div class="note">
+                    ※注1　ローマ字入力でないとエラーが出る場合があります。（例）いきものがかり >> Ikimonogakari <br>
+                    ※注2　「関連度」は、Spotify コミュニティの視聴履歴の分析に基づいています。<br><br>
+                </div>
+            </label>
+
+            <div class="input-wrapper">
+                <input type="text" id="artist_name" name="artist_name">
+            </div>
+            <div class="button-wrapper">
+                <input type="submit" value="クリック" class="button1">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

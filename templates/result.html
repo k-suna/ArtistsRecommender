@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Artist Network Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>以下が「{{ artist_name }}」と関連度の高いアーティストです</h1>
+        <div class="note">※注　記載のリリース年はアルバム収録年です。</div>
+        <ul>
+            {% for artist in top_artists_list %}
+                {% if loop.index == 1 %}
+                    <li><div class="first_order">{{ loop.index }}st. {{ artist }} </div><br><br> 
+                        {% for track_info in top_tracks_dict[artist] %}
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {% if track_info['image_url'] %}
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                            {% else %}
+                                <p>画像なし</p>
+                            {% endif %}  
+                        {% endfor %}</li>
+                {% elif loop.index == 2 %}
+                    <li><div class="second_order">{{ loop.index }}nd. {{ artist }} </div><br><br> 
+                        {% for track_info in top_tracks_dict[artist] %}
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {% if track_info['image_url'] %}
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                            {% else %}
+                                <p>画像なし</p>
+                            {% endif %}  
+                        {% endfor %}</li>
+                {% elif loop.index == 3 %}
+                    <li><div class="third_order">{{ loop.index }}rd. {{ artist }} </div><br><br> 
+                        {% for track_info in top_tracks_dict[artist] %}
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {% if track_info['image_url'] %}
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                            {% else %}
+                                <p>画像なし</p>
+                            {% endif %}   
+                        {% endfor %}</li>
+                {% else %}
+                    <li><div class="other_order">{{ loop.index }}th. {{ artist }} </div><br><br> 
+                        {% for track_info in top_tracks_dict[artist] %}
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {% if track_info['image_url'] %}
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                            {% else %}
+                                <p>画像なし</p>
+                            {% endif %}   
+                        {% endfor %}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <a href="/" class="button2">戻る</a>
+    </div>
+</body>
+</html>

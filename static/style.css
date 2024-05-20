@@ -1,0 +1,109 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.note {
+    text-align: left;
+    display: inline-block;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: -350px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.input-wrapper {
+    float: left;
+    width: 72%; /* ボタンよりも左側の幅 */
+}
+
+.button-wrapper {
+    float: right;
+    width: 28%; /* ボタンの幅 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button2 {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #0056b3;
+}
+
+.first_order{
+    color:#dbb400;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.second_order{
+    color:#9fa0a0;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.third_order{
+    color:#c47022;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.other_order{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}

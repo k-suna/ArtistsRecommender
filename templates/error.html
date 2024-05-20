@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Artist Not Found</title>
+</head>
+<body>
+    <div class="container">
+        <h1>入力されたアーティスト名は対応しておりません</h1>
+        <p>アーティスト名「{{ artist_name }}」はSpotifyのデータベースに存在しないか、対応していません。</p>
+        <p>ローマ字で入力するか、他のアーティスト名を入力してください。</p>
+        <a href="/" class="button2">戻る</a>
+    </div>
+</body>
+</html>

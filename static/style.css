@@ -16,13 +16,13 @@ body {
     text-align: center;
 }
 
-h1 {
+/* h1 {
     text-align: center;
 }
 
 form {
     text-align: center;
-}
+} */
 
 .note {
     text-align: left;
@@ -33,6 +33,7 @@ input[type="text"] {
     width: 300px;
     padding: 10px;
     margin-top: 10px;
+    margin-right: -200px;
 }
 
 input[type="submit"] {
@@ -41,9 +42,8 @@ input[type="submit"] {
     color: white;
     border: none;
     cursor: pointer;
-    display: inline-block;
     margin-top: 10px;
-    margin-left: -350px;
+    margin-left: -100px;
 }
 
 input[type="submit"]:hover {
@@ -51,12 +51,13 @@ input[type="submit"]:hover {
 }
 
 .input-wrapper {
-    float: left;
-    width: 72%; /* ボタンよりも左側の幅 */
+    display: inline-block;
+    width: 50%; /*ボタンよりも左側の幅*/
+    margin-right: 50px;
 }
 
 .button-wrapper {
-    float: right;
+    display: inline-block;
     width: 28%; /* ボタンの幅 */
 }
 

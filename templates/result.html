@@ -17,9 +17,9 @@
                         {% for track_info in top_tracks_dict[artist] %}
                             {{ track_info['name'] }}({{ track_info['release_date'] }})
                             {% if track_info['image_url'] %}
-                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
-                                <p>画像なし</p>
+                                <p>画像なし</p><br>
                             {% endif %}  
                         {% endfor %}</li>
                 {% elif loop.index == 2 %}
@@ -27,9 +27,9 @@
                         {% for track_info in top_tracks_dict[artist] %}
                             {{ track_info['name'] }}({{ track_info['release_date'] }})
                             {% if track_info['image_url'] %}
-                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
-                                <p>画像なし</p>
+                                <p>画像なし</p><br>
                             {% endif %}  
                         {% endfor %}</li>
                 {% elif loop.index == 3 %}
@@ -37,9 +37,9 @@
                         {% for track_info in top_tracks_dict[artist] %}
                             {{ track_info['name'] }}({{ track_info['release_date'] }})
                             {% if track_info['image_url'] %}
-                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
-                                <p>画像なし</p>
+                                <p>画像なし</p><br>
                             {% endif %}   
                         {% endfor %}</li>
                 {% else %}
@@ -47,9 +47,9 @@
                         {% for track_info in top_tracks_dict[artist] %}
                             {{ track_info['name'] }}({{ track_info['release_date'] }})
                             {% if track_info['image_url'] %}
-                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100">
+                                    <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
-                                <p>画像なし</p>
+                                <p>画像なし</p><br>
                             {% endif %}   
                         {% endfor %}</li>
                 {% endif %}

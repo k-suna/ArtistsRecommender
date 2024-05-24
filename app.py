@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import networkx as nx
@@ -88,18 +88,20 @@ def get_top_artists(artist_name):
 #初期画面
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-        artist_name = request.form['artist_name']
-        return redirect(url_for('result', artist_name=artist_name))
     return render_template('index.html')
 
 #リザルト画面
-@app.route('/result/<artist_name>')
-def result(artist_name):
+@app.route('/get_recommendations', methods=['POST'])
+def get_recommendations():
+    data = request.get_json()
+    artist_name = data.get('artist_name')
     top_artists_list, top_tracks_dict = get_top_artists(artist_name)
     if not top_artists_list:
-        return render_template('error.html', artist_name=artist_name)
-    return render_template('result.html', artist_name=artist_name, top_artists_list=top_artists_list, top_tracks_dict=top_tracks_dict)
+        return jsonify({'error': 'Artist not found'}), 404
+    return jsonify({
+        'top_artists_list': top_artists_list,
+        'top_tracks_dict': top_tracks_dict
+    })
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

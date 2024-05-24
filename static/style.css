@@ -109,6 +109,12 @@ li {
     font-family: 'Roboto', sans-serif;
 }
 
+footer {
+    width: 100%;
+    height: 120px; 
+    padding: 40px 0;
+}
+
 /* モバイルデバイス向けのスタイル */
 @media (max-width: 768px) {
     .input-wrapper, .button-wrapper {

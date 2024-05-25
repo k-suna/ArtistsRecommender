@@ -13,12 +13,9 @@
 
         <form action="/" method="POST">
             <label for="artist_name">
-                あなたの好きなアーティストと関連度の高いアーティストを10人推薦します。<br>
-                好きなアーティスト名を入力してください。<br><br>
-                <div class="note">
-                    ※注1　ローマ字入力でないとエラーが出る場合があります。（例）いきものがかり >> Ikimonogakari <br>
-                    ※注2　「関連度」は、Spotify コミュニティの視聴履歴の分析に基づいています。<br><br>
-                </div>
+                あなたの好きなアーティストと関連度(*)の高いアーティストを10人推薦します。<br>
+                アーティスト名を<strong>ローマ字</strong>で入力して下さい。<br><br>
+                (例)　いきものがかり => Ikimonogakari <br><br>
             </label>
 
             <div class="input-wrapper">
@@ -26,6 +23,10 @@
             </div>
             <div class="button-wrapper">
                 <input type="submit" value="OK" class="button1">
+            </div>
+            <br>
+            <div class="under-note">
+                *　「関連度」は、Spotify コミュニティの視聴履歴の分析に基づいています。
             </div>
         </form>
         <footer>

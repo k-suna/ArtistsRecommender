@@ -24,10 +24,9 @@ form {
     text-align: center;
 } */
 
-/* .upper-note { */
-    /* text-align: left; */
-    /* display: inline-block; */
-
+.upper-note {
+    margin-right: 80px;
+}
 
 .under-note {
     text-align: left;

@@ -15,7 +15,7 @@
                 {% if loop.index == 1 %}
                     <li><div class="first_order">{{ loop.index }}st. {{ artist }} </div><br><br> 
                         {% for track_info in top_tracks_dict[artist] %}
-                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})<br>
                             {% if track_info['image_url'] %}
                                     <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
@@ -25,7 +25,7 @@
                 {% elif loop.index == 2 %}
                     <li><div class="second_order">{{ loop.index }}nd. {{ artist }} </div><br><br> 
                         {% for track_info in top_tracks_dict[artist] %}
-                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})<br>
                             {% if track_info['image_url'] %}
                                     <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
@@ -35,7 +35,7 @@
                 {% elif loop.index == 3 %}
                     <li><div class="third_order">{{ loop.index }}rd. {{ artist }} </div><br><br> 
                         {% for track_info in top_tracks_dict[artist] %}
-                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})<br>
                             {% if track_info['image_url'] %}
                                     <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
@@ -45,7 +45,7 @@
                 {% else %}
                     <li><div class="other_order">{{ loop.index }}th. {{ artist }} </div><br><br> 
                         {% for track_info in top_tracks_dict[artist] %}
-                            {{ track_info['name'] }}({{ track_info['release_date'] }})
+                            {{ track_info['name'] }}({{ track_info['release_date'] }})<br>
                             {% if track_info['image_url'] %}
                                     <img src="{{ track_info['image_url'] }}" alt="{{ track_info['name'] }}のアルバムアート" width="100" height="100"><br>
                             {% else %}
